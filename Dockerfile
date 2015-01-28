@@ -7,5 +7,4 @@ RUN yum install -y \
 RUN yum clean all
 RUN rm -rf /etc/haproxy/haproxy.cfg
 RUN rm -rf /etc/keepalived/keepalived.conf
-CMD ["/usr/sbin/haproxy", "-f", "/etc/haproxy/haproxy.cfg"]
-
+CMD [ "haproxy", "-db", "-f" "/etc/haproxy/haproxy.cfg" ]
